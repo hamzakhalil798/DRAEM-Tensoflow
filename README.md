@@ -25,6 +25,20 @@ To train on the MVtec Anomaly Detection dataset download the data and extract it
 
 ```
 
+# requirements
+
+Code was Tested on :
+```
+tensorflow                    2.9.2
+keras                         2.9.0
+Keras-Preprocessing           1.1.2
+tensorflow-addons             0.19.0
+matplotlib                    3.2.2
+glob2                         0.7
+regex                         2022.6.2
+numpy                         1.21.6
+```
+
 # Training
 DRAEM has two Models. A reconstructive Model that reconstructs the Augmented Image and A Discriminative Model that predicts the Anomaly Mask.
 First Train the Reconstructed Model by :
