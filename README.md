@@ -25,7 +25,7 @@ To train on the MVtec Anomaly Detection dataset download the data and extract it
 
 ```
 
-# requirements
+# Requirements
 
 Code was Tested on :
 ```
