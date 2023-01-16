@@ -43,6 +43,7 @@ numpy                         1.21.6
 The DRAEM system employs a dual-model approach, consisting of a reconstructive model and a discriminative model. The reconstructive model is responsible for reconstructing augmented images, while the discriminative model predicts an anomaly mask.
 
 To train the reconstructive model, the training dataset must be passed to the 'Train_model_1.py' script as the '--data_path' argument, and the folder containing the anomaly source images must be provided as the '--anomaly_source_path' argument. Additionally, the script requires the specification of the learning rate ('--lr'), the number of training epochs ('--epochs'), the path to store checkpoints ('--checkpoint_path'), and the object name ('--object_name'). If the reconstructive model has been previously trained, and training is to be continued, the '--load_epoch' argument must also be provided. By default, the training starts from the first epoch (0).
+
 Example:
 
 ```
@@ -51,6 +52,7 @@ python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_
 For example, after 50 training epochs, the model will be saved in the specified 'checkpoints_path' directory.
  
 The next step is to train the discriminative model, which automatically loads the latest trained reconstructive model from the 'checkpoints_path' directory. The '--load_epoch' argument can be used to specify a previously trained model, if training is to be continued. By default, the training starts from the first epoch (0).
+
  Example :
  
  ```
